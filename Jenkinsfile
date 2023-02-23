@@ -10,6 +10,10 @@ pipeline {
 
       steps {
 
+                sh '''pwd
+
+ls'''
+
         git(branch: 'main', url: 'git@github.com:Nuxation/webapp-usine.git', credentialsId: 'git')
 
         sh '''pwd
@@ -28,10 +32,11 @@ ls'''
 
     }
 
-    stage('Deploy') {
+    /*stage('Deploy') {
 
       steps {
 
+        git(branch: 'main', url: 'git@github.com:Nuxation/webapp-usine.git', credentialsId: 'git')
 
         sh '''pwd
 
@@ -43,7 +48,7 @@ ls'''
 
       }
 
-    }
+    }*/
 
   }
 
