@@ -6,8 +6,6 @@ pipeline {
 
     stage('Build') {
 
-      checkout scm 
-
       agent any
 
       steps {
