@@ -4,9 +4,9 @@ pipeline {
 
   stages {
 
-    checkout scm 
-
     stage('Build') {
+
+      checkout scm 
 
       agent any
 
