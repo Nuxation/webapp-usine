@@ -32,7 +32,6 @@ ls'''
 
       steps {
 
-        git(branch: 'main', url: 'git@github.com:Nuxation/webapp-usine.git', credentialsId: 'git')
 
         sh '''pwd
 
