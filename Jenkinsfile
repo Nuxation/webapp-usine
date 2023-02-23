@@ -26,7 +26,7 @@ pipeline {
 
       steps {
 
-        echo 'Deploying....'
+        echo 'Deploying.... ${env.BUILD_ID}'
 
 
 
