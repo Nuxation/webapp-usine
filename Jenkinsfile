@@ -12,15 +12,7 @@ ls'''
     }
 
     stage('deploy') {
-      agent {
-        dockerfile {
-          filename '.'
-        }
-
-      }
-      environment {
-        t = 'webapp'
-      }
+      agent any
       steps {
         sh 'pwd ls'
       }
