@@ -11,6 +11,7 @@ ls'''
 
         sh '''pwd
 ls'''
+	def customImage = docker.build("webapp:${env.BUILD_ID}")	
       }
     }
   }
