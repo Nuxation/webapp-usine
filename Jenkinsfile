@@ -8,21 +8,21 @@ pipeline {
         sh '''pwd
 ls'''
         sh 'mvn clean install'
-        sh 'sudo docker image build -t webapp .'
       }
     }
 
     stage('deploy') {
-      agent any
+      agent {
+        dockerfile {
+          filename '.'
+        }
+
+      }
+      environment {
+        t = 'webapp'
+      }
       steps {
         sh 'pwd ls'
-      }
-    }
-
-    stage('test 2') {
-      agent any
-      steps {
-        echo ' ok ok'
       }
     }
 
