@@ -12,11 +12,15 @@ pipeline {
 
         sh 'mvn clean install'
 
-        archiveArtifacts artifacts: '**/target/*', fingerprint: true
+
+
+        archiveArtifacts artifacts: 'target/*', fingerprint: true
 
       }
 
     }
+
+    
 
     stage('Deploy') {
 
