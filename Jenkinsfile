@@ -14,7 +14,9 @@ pipeline {
 
         sh '''pwd
 
-ls'''
+ls
+
+git branch'''
 
         sh 'mvn clean install'
 
