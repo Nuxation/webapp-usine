@@ -12,9 +12,7 @@ pipeline {
 
         sh '''pwd
 
-ls
-
-git branch'''
+ls'''
 
         sh 'mvn clean install'
 
@@ -23,6 +21,8 @@ git branch'''
         sh '''pwd
 
 ls'''
+
+        sh 'docker version'
 
       }
 
