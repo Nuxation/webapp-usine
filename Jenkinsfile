@@ -8,15 +8,10 @@ pipeline {
         sh '''pwd
 ls'''
         sh 'mvn clean install'
+
+        sh '''pwd
+ls'''
       }
     }
-
-    stage('deploy') {
-      agent any
-      steps {
-        sh 'pwd ls'
-      }
-    }
-
   }
 }
