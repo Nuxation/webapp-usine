@@ -10,35 +10,25 @@ pipeline {
 
       steps {
 
-        sh '''pwd
-
-ls'''
-
         sh 'mvn clean install'
 
-
-
-        sh '''pwd
-
-ls'''
-
-        sh 'docker version'
+        archiveArtifacts artifacts: '**/target/*', fingerprint: true
 
       }
 
     }
 
-    /*stage('Deploy') {
+    stage('Deploy') {
 
       steps {
 
-        git(branch: 'main', url: 'git@github.com:Nuxation/webapp-usine.git', credentialsId: 'git')
+        echo 'Deploying....'
+
+
 
         sh '''pwd
 
 ls'''
-
-        echo 'Deploying....'
 
         sh 'mvn clean install'
 
