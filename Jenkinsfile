@@ -10,12 +10,6 @@ pipeline {
 
       steps {
 
-                sh '''pwd
-
-ls'''
-
-        git(branch: 'main', url: 'git@github.com:Nuxation/webapp-usine.git', credentialsId: 'git')
-
         sh '''pwd
 
 ls'''
