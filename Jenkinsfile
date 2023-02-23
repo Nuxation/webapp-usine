@@ -14,7 +14,7 @@ pipeline {
 
 
 
-        archiveArtifacts artifacts: 'target/*', fingerprint: true
+        archiveArtifacts artifacts: '**/target/*', fingerprint: true
 
       }
 
@@ -26,7 +26,7 @@ pipeline {
 
       steps {
 
-        echo 'Deploying.... ${env.BUILD_ID}'
+        echo "Deploying.... ${env.BUILD_ID}"
 
 
 
